@@ -15,6 +15,7 @@ public class BloomFilterSample {
 
         //初始化一个存储string数据的布隆过滤器，初始化大小100w,不能设置为0
         BloomFilter<String> bf = BloomFilter.create(Funnels.stringFunnel(Charsets.UTF_8), insertions, 0.001);
+
         //初始化一个存储string数据的set，初始化大小100w
         Set<String> sets = new HashSet<>(insertions);
         //初始化一个存储string数据的set，初始化大小100w
